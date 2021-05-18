@@ -1,0 +1,444 @@
+<style>
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+
+body {
+  /**
+    overflow: scroll;
+  **/
+}
+
+/** Title Image (Turned Off)
+.Title {
+    background-image: url();
+    width: 100vw;
+    height: 80vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    position: fixed;
+       top: 0;
+       left: 0;
+       right: 0;
+       bottom: 0;
+   }
+    url("https://i.imgur.com/N6htrqn.png")
+  **/
+
+  /** Title Video (Turned On) **/
+  #Video {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    position: fixed;
+       top: 0;
+       left: 0;
+       right: 0;
+       bottom: 0;
+  }
+
+   .titlebanner  {
+       display: grid;
+       background: transparent;
+       grid-template-columns: repeat(auto-fill, minmax(3.12vw, 1fr));
+       grid-template-rows: 2.60vw 2.60vw 2.60vw;
+       max-width: auto;
+       height: 20vh;
+       position: absolute;
+       top: -10;
+       right: 0;
+       bottom: 0;
+       left: -10;
+       gap: 2.60vw;
+
+
+   }
+   .logo {
+       background: url("https://i.imgur.com/N6htrqn.png");
+       width: 30vw;
+       height: 13vw;
+       background-size: contain; 
+       background-repeat: no-repeat;
+        position: fixed;
+        top: -6.5vh;
+        right: 0;
+        bottom: 0;
+        left: 5vh;
+   }
+
+   .overtext {
+           width: 100vw;
+           height: 100vh;
+           font-family: "Monda";
+           font-size: 5.5vw;
+           color: yellow; 
+           position: fixed;
+           top: 15%;
+           right: 0; 
+           left: 4.5%;
+           bottom: 0; 
+       }
+
+/**Navbar**/
+   
+   .navbar {
+       position: fixed;
+       top: -5%;
+       right: 00%;
+       bottom: 0px;
+       left: 25%;
+       font-family: 'Monda';
+
+   }
+
+   ul {
+       display: block;
+       list-style-type: none;
+       margin: 10;
+       padding: 60;
+       font-size: 1.14vw;
+       overflow: hidden; 
+   }
+
+   li { 
+        float: left;
+        padding-left: 1.56vw;
+        padding-right: 1.56vw;
+        text-shadow: 2px 2px 20px gray;
+    }
+   
+    li a {
+      display: block;
+      color: red;
+      text-align: center;
+      padding: 1.56vw 1.56vw;
+      text-decoration: none;
+      font-family: 'Monda';
+    }  
+
+
+    li a:hover {
+      box-shadow: 1px 16px 32px 1px rgba(0,0,0,0.2);
+      text-shadow: 1px 16px 32px 1px rgba(250, 250, 250, 0.2);
+    }
+
+
+    li a, .dropbtn {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px 16px;
+    text-decoration: none; 
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  box-shadow: 1px 16px 32px 1px rgba(0,0,0,0.2);
+  text-shadow: 1px 16px 32px 1px rgba(250, 250, 250, 0.2);
+}
+
+li.dropdown {
+  display: block;
+
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  padding-right: 200px;
+  min-width: 160px;
+  min-height: 50px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 0.83vw 0.83vw;
+  text-decoration: none;
+  display: inline;
+  text-align: center;
+}
+
+.dropdown-content a:hover {background-color: transparent; opacity: 1.2;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+  
+
+/**Navbar End**/
+
+   .infocontainer {
+     display: flex;
+     flex-direction: row; 
+     grid-gap: 1.56vw;
+     background-color: rgb(63, 63, 63);
+     opacity: 1;
+     width: 100vw;
+     height: 70vh;
+     padding-top: 5.33vh;
+     position: absolute;
+     left: 0;
+     bottom: -710;
+   }
+
+   .topc {
+       display: flex;
+       justify-content: center;
+       background-color: transparent;
+       font-family: 'Monda';
+       font-size: 0.85vw;
+       color: white;
+       width: 40vw;
+       height: 15vh;
+       justify-self: center;
+       justify-content: center;
+       position: absolute; 
+       top: 15;
+       left: 30%; 
+   }
+
+   .infobox {
+       display: inline-flex; 
+       flex-wrap: wrap; 
+       flex-direction: row;
+       margin: 0.52vw;
+       gap: 0vw;
+       padding-top: 50;
+       gap: 7vw;
+   }
+
+   .leftc {
+       background-color: transparent;
+       width: 39vw;
+       height: 61vh;
+       align-self: left; 
+       order: 1; 
+       padding-left: 1.56vw;
+       margin-left: 5.6vw;
+       font-family: 'Barlow';
+       color: white;
+       font-size: 1.97vw; 
+       justify-content: center; 
+   }
+
+   .leftc1 {
+     font-family: 'Barlow', sans-serif;
+     color: red; 
+     font-size: 1.30vw; 
+   }
+
+   .rightc {
+       display: flex; 
+       flex-direction: column;
+       background-color: transparent;
+       width: 37.5vw;
+       height: 61vh; 
+       order: 2; 
+       padding-right: 0.52vw; 
+       margin-right: 5vw;
+   }
+   .right-t {
+     display: flex; 
+      background-image: url(https://i.imgur.com/2WBmYdX.png);
+      background-size: cover;
+      border-radius: 0%;
+      -moz-box-shadow:    inset 0 0 60px rgb(63, 63, 63);
+      -webkit-box-shadow: inset 0 0 60px rgb(63, 63, 63);
+      box-shadow:         inset 0 0 60px rgb(63, 63, 63);
+       width: 31vw;
+       height: 31vh;
+       align-self: flex-start;
+       transition: all .5s;
+       
+
+   }
+
+   .right-t:hover {
+     width: 32vw;
+     height: 32vh;
+     transition: all .5s;
+   }
+
+   .right-b {
+     display: flex;
+     background-image: url(https://i.imgur.com/HFQK88f.png);
+     background-size: cover; 
+     border-radius: 0%;
+     -moz-box-shadow:    inset 0 0 60px rgb(63, 63, 63);
+     -webkit-box-shadow: inset 0 0 60px rgb(63, 63, 63);
+     box-shadow:         inset 0 0 60px rgb(63, 63, 63);
+      width: 31vw;
+      height: 31vh;
+      align-self: flex-end;
+      transition: all .5s;
+
+   }
+
+   .right-b:hover {
+     width: 32vw;
+     height: 32vh;
+     transition: all .5s;
+   }
+
+   .button {
+       position: absolute; 
+       height: 4.5vh;
+       width: 2.2vw; 
+       background-image: url(https://i.imgur.com/4JGqKdo.png);
+       background-size: 4vh 2vw;
+       background-color: transparent;
+       background-repeat: no-repeat;
+       outline: none;
+       border: none;  
+       position: absolute; 
+       left: 50%;
+       bottom: 0;
+   } 
+   footer {
+   padding-top: 1.06vh; 
+   display: block; 
+   text-align: center;
+   padding: 0.15vw;
+   background-color: transparent;
+   color: black;
+   position: absolute; 
+   bottom: 0;
+   width: 100vw;
+   height: 5vh;
+   padding-top: 0.53vh;
+}
+
+   .leftbottom {
+     position: absolute;
+     bottom: 5vh;
+     left: 8vw;
+     width: 45vw;
+     height: 17vh;
+     background-color: transparent;
+     display: flex;
+     flex-direction: row; 
+     gap: 0.2vw; 
+     padding-bottom: 5vh;
+   }
+
+   .l1 {
+     width: 17.5vw;
+     height: 22vh;
+     background-image: url(https://i.imgur.com/CEuHTOJ.png); 
+     background-size: contain;
+     background-repeat: no-repeat;
+   }
+ 
+   .l2 {
+     width: 17.5vw;
+     height: 22vh;
+     background-image: url(https://i.imgur.com/Yx0dcCu.png);
+     background-size: contain;
+     background-repeat: no-repeat;
+   }
+
+</style>
+
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <title>CKlaxon's Gipfeln</title>
+</head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Monda">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,600&display=swap" rel="stylesheet">
+
+<body>
+
+ <body class = Title>
+    <video autoplay muted loop id="Video">
+        <source src="gipfekn3.mp4" type="video/mp4">
+      </video>
+      
+      <div class = logo>
+
+      </div>
+      
+     <div class = titlebanner>
+      <div class = navbar>
+        <ul>
+          <li><a href="">HOME</a></li>
+          <li><a href="CarsPortal">CARS</a></li>
+          <li><a href="https://cklaxon.co.uk/Gipfeln/Error">ABOUT US</a></li>
+          <li><a href="http://cklaxon.co.uk">OTHER PROJECTS</a></li>
+         </ul>
+        </div>
+        <div class = overtext>
+            <h1>KUYENDA DACE</h1>
+        </div>
+      </div>
+    </div>
+    </body>
+
+    <button class = button>
+        <script language=JavaScript>
+        <input type="button" onClick="document.getElementById('topc').scrollIntoView();" />
+        </script>
+    </button>
+    
+    <div class = infocontainer>
+        
+      <div class = topc>
+        <h1>The Summit of Automotive Engineering</h1>
+     </div>
+     
+     <div class = leftbottom>
+      <div class = l1>
+
+      </div>
+
+       <div class = l2>
+
+       </div>
+
+    </div>
+
+    <div class = infobox>
+
+        <div class = leftc>
+           <h1>Power, Quality, Tuning.</h1>
+           <div class = leftc1>
+           <h1>Market Dominating Performance.</h1>
+          </div>
+        </div>
+        <div class = rightc>
+          <div class = right-t>
+
+          </div>
+          <div class = right-b>
+
+          </div>
+
+        </div>
+    </div>
+    <footer>
+      <p>CKlaxon<p>
+    </footer>
+  </div>
+
+  
+  
+
+
+</body>
+</html>

@@ -1,0 +1,642 @@
+<style>
+
+    html {
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+    }
+    
+    
+    body {
+      /**
+        overflow: scroll;
+      **/
+    }
+    
+    /** Title Image (Turned On) **/
+    .background {
+        background-image: url(https://images.unsplash.com/photo-1435738623530-c32d3631932f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+        width: 100vw;
+        height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        object-fit: cover;
+        position: fixed;
+           top: 0;
+           left: 0;
+           right: 0;
+           bottom: 0;
+       }
+
+       .titlebanner  {
+           display: grid;
+           background: transparent;
+           grid-template-columns: repeat(auto-fill, minmax(3.12vw, 1fr));
+           grid-template-rows: 2.60vw 2.60vw 2.60vw;
+           max-width: auto;
+           height: 20vh;
+           position: absolute;
+           top: -10;
+           right: 0;
+           bottom: 0;
+           left: -10;
+           gap: 2.60vw;
+    
+    
+       }
+       .logo {
+           background: url(https://i.imgur.com/NIgY62g.png);
+           width: 30vw;
+           height: 13vw;
+           background-size: contain; 
+           background-repeat: no-repeat;
+            position: fixed;
+            top: -7vh;
+            right: 0;
+            bottom: 0;
+            left: 4vh;
+       }
+    
+       .overtext {
+           width: 100vw;
+           height: 100vh;
+           font-family: "Monda";
+           font-size: 8.5vw;
+           color: white; 
+           position: fixed;
+           top: 0;
+           right: 0; 
+           left: 15%;
+           bottom: 0; 
+       }
+    
+    /**Navbar**/
+       
+       .navbar {
+           position: fixed;
+           top: -5%;
+           right: 00%;
+           bottom: 0px;
+           left: 25%;
+           font-family: 'Monda';
+           z-index: 1;
+    
+       }
+    
+       ul {
+           display: block;
+           list-style-type: none;
+           margin: 10;
+           padding: 60;
+           font-size: 1.14vw;
+           overflow: hidden; 
+       }
+    
+       li { 
+            float: left;
+            padding-left: 1.56vw;
+            padding-right: 1.56vw;
+            text-shadow: 2px 2px 20px gray;
+        }
+       
+        li a {
+          display: block;
+          color: red;
+          text-align: center;
+          padding: 1.56vw 1.56vw;
+          text-decoration: none;
+          font-family: 'Monda';
+        }  
+    
+    
+        li a:hover {
+          box-shadow: 1px 16px 32px 1px rgba(0,0,0,0.2);
+          text-shadow: 1px 16px 32px 1px rgba(250, 250, 250, 0.2);
+        }
+    
+    
+        li a, .dropbtn {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 16px 16px;
+        text-decoration: none; 
+    }
+    
+    li a:hover, .dropdown:hover .dropbtn {
+      box-shadow: 1px 16px 32px 1px rgba(0,0,0,0.2);
+      text-shadow: 1px 16px 32px 1px rgba(250, 250, 250, 0.2);
+    }
+    
+    li.dropdown {
+      display: block;
+    
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      padding-right: 200px;
+      min-width: 160px;
+      min-height: 50px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: white;
+      padding: 0.83vw 0.83vw;
+      text-decoration: none;
+      display: inline;
+      text-align: center;
+    }
+    
+    .dropdown-content a:hover {background-color: transparent; opacity: 1.2;}
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+      
+    
+    /**Navbar End**/
+
+       .infocontainer {
+         display: flex;
+         flex-direction: row; 
+         grid-gap: 1.56vw;
+         background-color: rgb(63, 63, 63);
+         opacity: 1;
+         width: 100%; /** 110vw works **/
+         height: 350vh;
+         padding-top: 0vh;
+         padding-right: auto;
+         position: absolute;
+         left: 0;
+         bottom: -350%;
+         z-index: 2; 
+       }
+
+       .infobox {
+           background-color: transparent;
+           display: flex; 
+           flex-direction: row; 
+           position: absolute; 
+           width: 97.8vw; 
+           margin: 0.52vw;
+           gap: 0vw;
+           padding-top: 50;
+           gap: 0vw;
+
+       }
+
+    .l1i1 {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column-reverse;
+      background-image: url(https://i.imgur.com/bSLdRUP.png); 
+      background-repeat: no-repeat;
+      background-size: contain; 
+      width: 27.94vw;
+      height: 40vh; 
+      order: 1; 
+      transition: all .5s;
+    }
+
+    .l1i1:hover {
+      box-shadow: 1px 16px 32px 1px rgba(0,0,0,2);
+      height: 41vh;
+      transition: all .5s;
+    }
+
+    .l1inf1 {
+      text-decoration: none;
+      font-family: 'Barlow';
+      font-size: 3vw;
+      color: white; 
+      background-color: black;
+      height: 7.5vh;
+      width: 27.94vw;
+      text-align: center;
+    }
+
+    .l1i2 {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column-reverse;
+      background-image: url(https://i.imgur.com/zYRnDvZ.png); 
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 27.94vw;
+      height: 40vh; 
+      order: 2; 
+      transition: all .5s;
+    }
+
+    .l1i2:hover {
+      box-shadow: 1px 16px 32px 1px rgba(0,0,0,2);
+      height: 41vh;
+      transition: all .5s;
+    }
+
+    .l1inf2 {
+      text-decoration: none;
+      font-family: 'Barlow';
+      font-size: 3vw;
+      color: white; 
+      background-color: black;
+      height: 7.5vh;
+      width: 27.94vw;
+      text-align: center;   
+       }
+
+    .l1i3 {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column-reverse;
+      background-image: url(https://i.imgur.com/3h0d6f7.png); 
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 27.94vw;
+      height: 40vh; 
+      order: 3; 
+      transition: all .5s;
+    }
+
+    .l1i3:hover {
+      box-shadow: 1px 16px 32px 1px rgba(0,0,0,2);
+      height: 41vh;
+      transition: all .5s;
+    }
+
+    .l1inf3 {
+      text-decoration: none;
+      font-family: 'Barlow';
+      font-size: 3vw;
+      color: white; 
+      background-color: black;
+      height: 7.5vh;
+      width: 27.95vw;
+      text-align: center;   
+    }
+
+    .infolower {
+           background-color: transparent;
+           display: flex; 
+           flex-direction: row; 
+           align-items: center;
+           position: absolute; 
+           top: 100%;
+           width: 97.8vw; 
+           margin: 0vw;
+           gap: 0vw;
+           padding-top: 50;
+           gap: 0vw;
+        
+       }
+    
+    .l2i1 {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column-reverse;
+      background: url(https://i.imgur.com/UFmUnpZ.png); 
+      background-repeat: no-repeat;
+      background-size: contain; 
+      width: 27.94vw;
+      height: 40vh; 
+      order: 1; 
+      transition: all .5s;
+    }
+
+    .l2i1:hover {
+      box-shadow: 1px 16px 32px 1px rgba(0,0,0,2);
+      height: 41vh;
+      transition: all .5s;
+    }
+
+    .l2inf1 {
+      text-decoration: none;
+      font-family: 'Barlow';
+      font-size: 3vw;
+      color: white; 
+      background-color: black;
+      height: 7.5vh;
+      width: 27.95vw;
+      text-align: center;  
+    }
+
+    .l2i2 {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column-reverse;
+      background: url(https://i.imgur.com/duPwT5R.png); 
+      background-repeat: no-repeat;
+      background-size: contain; 
+      width: 27.94vw;
+      height: 40vh; 
+      order: 1; 
+      transition: all .5s;
+
+    }
+
+    .l2i2:hover {
+      box-shadow: 1px 16px 32px 1px rgba(0,0,0,2);
+      height: 41vh;
+      transition: all .5s;
+    }
+
+    .l2inf2 {
+      text-decoration: none;
+      font-family: 'Barlow';
+      font-size: 3vw;
+      color: white; 
+      background-color: black;
+      height: 7.5vh;
+      width: 27.95vw;
+      text-align: center;  
+    }
+
+    .l2i3 {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column-reverse;
+      background: url(https://i.imgur.com/duPwT5R.png); 
+      background-repeat: no-repeat;
+      background-size: contain; 
+      width: 27.94vw;
+      height: 40vh; 
+      order: 1; 
+      transition: all .5s;
+
+    }
+
+    .l2i3:hover {
+      box-shadow: 1px 16px 32px 1px rgba(0,0,0,2);
+      height: 41vh;
+      transition: all .5s;
+    }
+
+    .l2inf3 {
+      text-decoration: none;
+      font-family: 'Barlow';
+      font-size: 3vw;
+      color: white; 
+      background-color: black;
+      height: 7.5vh;
+      width: 27.95vw;
+      text-align: center;  
+    }
+
+    .midinfo {
+      position: absolute;
+      top: 96.5vh;
+      left: 40vw;
+      font-family: 'Barlow';
+      font-size: 3vw;
+      font-style: italic;
+      background-color: transparent;
+      color: black;
+      width: 100%;
+      height: 15vh;
+      order: 4;
+    }
+
+    .sideart {
+      background-image: url(https://i.imgur.com/WJfEWdJ.png);
+      position: absolute;
+      background-size: contain;
+      background-repeat: no-repeat;
+      top: -42vh;
+      left: 85vw;
+      width: 25vw;
+      height: 40vh; 
+      z-index: 0;
+
+    }
+
+
+    /**
+    .boxlower1 {
+      position: absolute;
+      background-size: contain;
+      bottom: -300%;
+      width: 97.8vw;
+      height: 80vh;
+    }
+    **/
+    #video1 {
+      background-size: contain; 
+      position: absolute;
+      width: 100vw;
+      height: 90vh;
+      top: 110vh;
+      transition: all .5s;
+    } 
+
+    #video1:hover {
+      cursor: pointer;
+      transition: all .5s;
+      box-shadow: inset 1px 20px 32px 1px rgba(0,0,0,0.2);
+    }
+
+
+    #video2 {
+      background-size: contain; 
+      position: absolute;
+      width: 100vw;
+      height: 90vh;
+      top: 205vh;
+      transition: all .5s;
+    } 
+
+    #video2:hover {
+      cursor: pointer;
+      transition: all .5s;
+      box-shadow: inset 1px 20px 32px 1px rgba(0,0,0,0.2);
+    }
+
+     /**
+    .boxlower2 {
+      z-index: 1; 
+      position: absolute;
+      background-size: contain;
+      bottom: -500%;
+      width: 97.8vw;
+      height: 80vh;
+    }
+
+    /** .video-b {
+      background-size: contain; 
+      position: absolute;
+      width: 100vw;
+      height: 90vh;
+    } **/
+
+    .boxlower3inf {
+      background-color: white; 
+      position: absolute;
+      bottom: -650%;
+      width: 97.8vw;
+      height: 40vh;
+    }
+
+       .button {
+           position: absolute; 
+           height: 4.5vh;
+           width: 2.2vw; 
+           background-image: url(https://i.imgur.com/4JGqKdo.png);
+           background-size: 4vh 2vw;
+           background-color: transparent;
+           background-repeat: no-repeat;
+           outline: none;
+           border: none;  
+           position: absolute; 
+           left: 50%;
+           bottom: 0;
+       } 
+       footer {
+       padding-top: 1.06vh; 
+       display: block; 
+       text-align: center;
+       padding: 0.15vw;
+       background-color: transparent;
+       color: black;
+       position: absolute; 
+       bottom: 0;
+       width: 100vw;
+       height: 5vh;
+       padding-top: 0.53vh;
+       }
+    
+    </style>
+    
+    
+    <!DOCTYPE html>
+    <html>
+    
+      <head>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+        <title>CKlaxon's Gipfeln</title>
+    </head>
+    
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+      <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Monda">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,600&display=swap" rel="stylesheet">
+    
+    <body>
+    
+     <body class = Title>
+        <div class = background>
+
+        </div>
+          
+          <div class = logo>
+    
+          </div>
+          
+         <div class = titlebanner>
+          <div class = navbar>
+            <ul>
+              <li><a href="Homepage">HOME</a></li>
+              <li><a href="CarsPortal">CARS</a></li>
+              <li><a href="https://cklaxon.co.uk/Gipfeln/Error">ABOUT US</a></li>
+              <li><a href="http://cklaxon.co.uk">OTHER PROJECTS</a></li>
+             </ul>
+            </div>
+            <div class = overtext>
+                <h1>STREET</h1>
+            </div>
+          </div>
+        </div>
+        </body>
+
+    
+        <button class = button>
+            <script language=JavaScript>
+            <input type="button" onClick="document.getElementById('topc').scrollIntoView();" />
+            </script>
+        </button>
+        
+        <div class = infocontainer>
+             
+        <div class = infobox>
+
+            <a href = "https://cklaxon.co.uk/Gipfeln/Error" class = l1i1>
+               <div class = l1inf1>
+                  FERNADALE
+               </div>
+              </a>
+            <a href = "https://cklaxon.co.uk/Gipfeln/Error" class = l1i2>
+              <div class = l1inf2>
+                 SUMMIT
+              </div>
+            </a>
+            <a href = "Cars/Street/Kuyenda" class = l1i3>
+              <div class = l1inf3>
+                KUYENDA
+              </div>
+            </a>
+          
+        <div class = infolower>
+ 
+          <a href = "https://cklaxon.co.uk/Gipfeln/Error" class = l2i1>
+            <div class = l2inf1>
+              PYTHON
+            </div>
+          </a>
+         <a href = "" class = l2i2>
+           <div class = l2inf2>
+            COMING SOON
+           </div>
+          </a>
+         <a href = "" class = l2i3>
+           <div class = l2inf3>
+            COMING SOON
+           </div>
+          </a>
+         <div class = sideart>
+
+        </div>
+
+
+        </div>
+
+        <div class = midinfo>
+          SHOWCASE
+        </div>
+
+       <!--<div class = boxlower1>-->
+          <video id = "video1" muted loop onclick="this.paused ? this.play() : this.pause();" id="Video" poster="https://i.imgur.com/ITR68d1.png">
+            <source src="gipfekn2.mp4" type="video/mp4">
+    
+        </video>
+       <!--</div>-->
+
+       <!--<div class = boxlower2>-->
+         <video id = "video2" muted loop onclick="this.paused ? this.play() : this.pause();" id="Video" poster="https://i.imgur.com/OddZiuR.png">
+           <source src="gipfekn3.mp4" type="video/mp4">
+        </video>
+       <!--</div>-->
+
+       <div class = boxlower2>
+
+       </div>
+
+       <div class = boxlower3inf>
+
+       </div>
+
+        </div>
+        <footer>
+          <p>CKlaxon<p>
+        </footer>
+      </div>
+    
+      
+      
+    
+    
+    </body>
+    </html>
